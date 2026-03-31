@@ -1,25 +1,17 @@
 #import "Macros.h"
 
 void setup() {
-    // Menu Title
     [[(Menu *)menuInstance getMenu] setMenuTitle:@"HARA IOS MOD"];
     [[(Menu *)menuInstance getMenu] setMenuIcon:nil]; 
 
-    // Money and Stats
-    [(Menu *)menuInstance addButton:@"Add Max Money" description:@"Give 999999999 Money"];
-    [(Menu *)menuInstance addSwitch:@"Infinite Health" description:@"God Mode"];
-    [(Menu *)menuInstance addSwitch:@"Infinite Ammo" description:@"No Reload"];
-    [(Menu *)menuInstance addSwitch:@"Never Wanted" description:@"No Police"];
+    [(Menu *)menuInstance addButton:@"Add Max Money" description:@"Get Cash"];
+    [(Menu *)menuInstance addSwitch:@"God Mode" description:@"Infinite Health"];
+    [(Menu *)menuInstance addSwitch:@"No Police" description:@"Never Wanted"];
 
-    // Car Spawner List
-    NSArray *cars = @[
-        @"Infernus", @"Turismo", @"Bullet", @"Cheetah", @"NRG-500",
-        @"Monster Truck", @"Rhino Tank", @"Hydra Jet", @"Hunter Heli"
-    ];
-    [(Menu *)menuInstance addSelection:@"Spawn Car" description:@"Select a vehicle" options:cars];
+    NSArray *cars = @[@"Infernus", @"Turismo", @"Bullet", @"NRG-500", @"Rhino Tank", @"Hydra Jet"];
+    [(Menu *)menuInstance addSelection:@"Spawn Car" description:@"Select Vehicle" options:cars];
 }
 
-// Function to handle buttons and switches
 void s_update(int feature, bool value, float sliderValue, int selection) {
-    // Handling logic will be added here
+    // Logic handles here
 }
